@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+        <!ELEMENT biblioteca (libros|revistas|periodicos)*>
+        <!ELEMENT libros (libro)*>
+        <!ELEMENT libro (tipo_clase|titulo|numeropaginas|indice|sinopsis|capitulos)*>
+        <!ATTLIST libro
+                id CDATA #REQUIRED>
+        <!ELEMENT tipo_clase (#PCDATA)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT numeropaginas (#PCDATA)>
+        <!ATTLIST numeropaginas
+                paginas CDATA #REQUIRED>
+        <!ELEMENT indice (#PCDATA)>
+        <!ATTLIST indice
+                enlace CDATA #REQUIRED>
+        <!ELEMENT sinopsis (#PCDATA)>
+        <!ATTLIST sinopsis
+                enlace CDATA #REQUIRED>
+        <!ELEMENT capitulos (capitulo)*>
+        <!ELEMENT capitulo (contenido)*>
+        <!ATTLIST capitulo
+                paginas CDATA #REQUIRED
+                titulo CDATA #REQUIRED>
+        <!ELEMENT contenido (#PCDATA)>
+        <!ATTLIST contenido
+                enlace CDATA #REQUIRED>
+        <!ELEMENT revistas (revista)*>
+        <!ELEMENT revista (tipo_clase|titulo|numeropublicacion|numeropaginas|indice|secciones)*>
+        <!ATTLIST revista
+                id CDATA #REQUIRED>
+        <!ELEMENT numeropublicacion (#PCDATA)>
+        <!ATTLIST numeropublicacion
+                numPubli CDATA #REQUIRED>
+        <!ELEMENT secciones (seccion)*>
+        <!ELEMENT seccion (contenido|articulos)*>
+        <!ATTLIST seccion
+                paginas CDATA #REQUIRED
+                tipo CDATA #REQUIRED>
+        <!ELEMENT periodicos (periodico)*>
+        <!ELEMENT periodico (tipo_clase|titulo|fecha|indice|secciones)*>
+        <!ATTLIST periodico
+                id CDATA #REQUIRED>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT articulos (articulo)*>
+        <!ELEMENT articulo (contenido)*>
+        <!ATTLIST articulo
+                autor CDATA #REQUIRED>
+        ]>
+<biblioteca>
+  <libros>
+    <libro id="L0001">
+      <tipo_clase>novela</tipo_clase>
+      <titulo>El nombre del viento</titulo>
+      <numeropaginas paginas="145"/>
+      <indice enlace="https://enlace-indice-L0001.com"/>
+      <sinopsis enlace="https://enlace-sinopsis-L0001.com"/>
+      <capitulos>
+        <capitulo titulo="Capitulo 1" paginas="10">
+          <contenido enlace="https://enlace-capitulo-1-L0001.com"/>
+        </capitulo>
+        <capitulo titulo="Capitulo 2" paginas="15">
+          <contenido enlace="https://enlace-capitulo-2-L0001.com"/>
+        </capitulo>
+        <capitulo titulo="Capitulo 3" paginas="19">
+          <contenido enlace="https://enlace-capitulo-3-L0001.com"/>
+        </capitulo>
+      </capitulos>
+    </libro>
+    <libro id="L0002">
+      <tipo_clase>infantil</tipo_clase>
+      <titulo>Pepito y su perro</titulo>
+      <numeropaginas paginas="62"/>
+      <indice enlace="https://enlace-indice-L0002.com"/>
+      <sinopsis enlace="https://enlace-sinopsis-L0002.com"/>
+      <capitulos>
+        <capitulo titulo="Capitulo 1" paginas="7">
+          <contenido enlace="https://enlace-capitulo-1-L0002.com"/>
+        </capitulo>
+        <capitulo titulo="Capitulo 2" paginas="8">
+          <contenido enlace="https://enlace-capitulo-2-L0002.com"/>
+        </capitulo>
+        <capitulo titulo="Capitulo 3" paginas="5">
+          <contenido enlace="https://enlace-capitulo-3-L0002.com"/>
+        </capitulo>
+      </capitulos>
+    </libro>
+    <libro id="L0003">
+      <tipo_clase>didactico</tipo_clase>
+      <titulo>El cuerpo humano</titulo>
+      <numeropaginas paginas="247"/>
+      <indice enlace="https://enlace-indice-L0003.com"/>
+      <sinopsis enlace="https://enlace-sinopsis-L0003.com"/>
+      <capitulos>
+        <capitulo titulo="La Cabeza" paginas="32">
+          <contenido enlace="https://enlace-capitulo-1-L0003.com"/>
+        </capitulo>
+        <capitulo titulo="El Torso" paginas="50">
+          <contenido enlace="https://enlace-capitulo-2-L0003.com"/>
+        </capitulo>
+        <capitulo titulo="Las Piernas" paginas="39">
+          <contenido enlace="https://enlace-capitulo-3-L0003.com"/>
+        </capitulo>
+      </capitulos>
+    </libro>
+  </libros>
+  <revistas>
+    <revista id="R0001">
+      <tipo_clase>informatica</tipo_clase>
+      <titulo>PC World</titulo>
+      <numeropublicacion numPubli="79"/>
+      <numeropaginas paginas="62"/>
+      <indice enlace="https://enlace-indice-R0001.com"/>
+      <secciones>
+        <seccion tipo="Software" paginas="6">
+          <contenido enlace="https://enlace-seccion-1-R0001.com"/>
+        </seccion>
+        <seccion tipo="Hardware" paginas="7">
+          <contenido enlace="https://enlace-seccion-2-R0001.com"/>
+        </seccion>
+       <seccion tipo="Entrevista" paginas="5">
+          <contenido enlace="https://enlace-seccion-3-R0001.com"/>
+        </seccion>
+      </secciones>
+    </revista>
+    <revista id="R0002">
+      <tipo_clase>corazon</tipo_clase>
+      <titulo>Hola!</titulo>
+      <numeropublicacion numPubli="141"/>
+      <numeropaginas paginas="58"/>
+      <indice enlace="https://enlace-indice-R0002.com"/>
+      <secciones>
+        <seccion tipo="Entrevista" paginas="7">
+          <contenido enlace="https://enlace-seccion-1-R0002.com"/>
+        </seccion>
+        <seccion tipo="Rumores" paginas="10">
+          <contenido enlace="https://enlace-seccion-2-R0002.com"/>
+        </seccion>
+       <seccion tipo="Fotos" paginas="9">
+          <contenido enlace="https://enlace-seccion-3-R0002.com"/>
+        </seccion>
+      </secciones>
+    </revista>
+    <revista id="R0003">
+      <tipo_clase>coches</tipo_clase>
+      <titulo>Mundo Motor</titulo>
+      <numeropublicacion numPubli="48"/>
+      <numeropaginas paginas="65"/>
+      <indice enlace="https://enlace-indice-R0003.com"/>
+      <secciones>
+        <seccion tipo="Competicion" paginas="12">
+          <contenido enlace="https://enlace-seccion-1-R0003.com"/>
+        </seccion>
+        <seccion tipo="Analisis coche" paginas="8">
+          <contenido enlace="https://enlace-seccion-2-R0003.com"/>
+        </seccion>
+       <seccion tipo="Motos" paginas="6">
+          <contenido enlace="https://enlace-seccion-3-R0003.com"/>
+        </seccion>
+      </secciones>
+    </revista>
+    <revista id="R0004">
+      <tipo_clase>investigacion</tipo_clase>
+      <titulo>Cosmos</titulo>
+      <numeropublicacion numPubli="193"/>
+      <numeropaginas paginas="92"/>
+      <indice enlace="https://enlace-indice-R0004.com"/>
+      <secciones>
+        <seccion tipo="Entrevista" paginas="10">
+          <contenido enlace="https://enlace-seccion-1-R0004.com"/>
+        </seccion>
+        <seccion tipo="Espacio" paginas="19">
+          <contenido enlace="https://enlace-seccion-2-R0004.com"/>
+        </seccion>
+       <seccion tipo="Satelites" paginas="6">
+          <contenido enlace="https://enlace-seccion-3-R0004.com"/>
+        </seccion>
+      </secciones>
+    </revista>
+    <revista id="R0005">
+      <tipo_clase>otras</tipo_clase>
+      <titulo>Zapas</titulo>
+      <numeropublicacion numPubli="39"/>
+      <numeropaginas paginas="40"/>
+      <indice enlace="https://enlace-indice-R0005.com"/>
+      <secciones>
+        <seccion tipo="Nike" paginas="7">
+          <contenido enlace="https://enlace-seccion-1-R0005.com"/>
+        </seccion>
+        <seccion tipo="Adidas" paginas="8">
+          <contenido enlace="https://enlace-seccion-2-R0005.com"/>
+        </seccion>
+       <seccion tipo="Puma" paginas="4">
+          <contenido enlace="https://enlace-seccion-3-R0005.com"/>
+        </seccion>
+      </secciones>
+    </revista>
+  </revistas>
+  <periodicos>
+    <periodico id="P0001">
+      <tipo_clase>nacional</tipo_clase>
+      <titulo>El Continental</titulo>
+      <fecha>2023-05-04</fecha>
+      <indice enlace="https://enlace-indice-P0001.com"/>
+      <secciones>
+        <seccion tipo="economica" paginas="6">
+          <articulos>
+            <articulo autor="Juan Porras">
+              <contenido enlace="https://enlace-economica-1-P0001.com"/>
+            </articulo>
+            <articulo autor="Margarita del Monte">
+              <contenido enlace="https://enlace-economica-2-P0001.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="opinion" paginas="3">
+          <articulos>
+            <articulo autor="Jacinto Senna">
+              <contenido enlace="https://enlace-opinion-1-P0001.com"/>
+            </articulo>
+            <articulo autor="Alba Santos">
+              <contenido enlace="https://enlace-opinion-2-P0001.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="deportes" paginas="6">
+          <articulos>
+            <articulo autor="Antonio Lobato">
+              <contenido enlace="https://enlace-deportes-1-P0001.com"/>
+            </articulo>
+            <articulo autor="Laura Torres">
+              <contenido enlace="https://enlace-deportes-2-P0001.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="nacional" paginas="5">
+          <articulos>
+            <articulo autor="Francisco Robles">
+              <contenido enlace="https://enlace-nacional-1-P0001.com"/>
+            </articulo>
+            <articulo autor="Eva Pomodora">
+              <contenido enlace="https://enlace-nacional-2-P0001.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="internacional" paginas="7">
+          <articulos>
+            <articulo autor="Pablo Parera">
+              <contenido enlace="https://enlace-internacional-1-P0001.com"/>
+            </articulo>
+            <articulo autor="Leticia de Santos">
+              <contenido enlace="https://enlace-internacional-2-P0001.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+      </secciones>
+    </periodico>
+    <periodico id="P0002">
+      <tipo_clase>internacional</tipo_clase>
+      <titulo>The World</titulo>
+      <fecha>2023-05-06</fecha>
+      <indice enlace="https://enlace-indice-P0002.com"/>
+      <secciones>
+        <seccion tipo="economica" paginas="8">
+          <articulos>
+            <articulo autor="Wesley Snipes">
+              <contenido enlace="https://enlace-economica-1-P0002.com"/>
+            </articulo>
+            <articulo autor="Elizabeth Lyon">
+              <contenido enlace="https://enlace-economica-2-P0002.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="opinion" paginas="4">
+          <articulos>
+            <articulo autor="Matthew Goode">
+              <contenido enlace="https://enlace-opinion-1-P0002.com"/>
+            </articulo>
+            <articulo autor="Susan Peters">
+              <contenido enlace="https://enlace-opinion-2-P0002.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="deportes" paginas="6">
+          <articulos>
+            <articulo autor="Michael Doohan">
+              <contenido enlace="https://enlace-deportes-1-P0002.com"/>
+            </articulo>
+            <articulo autor="Alex Morgan">
+              <contenido enlace="https://enlace-deportes-2-P0002.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="nacional" paginas="5">
+          <articulos>
+            <articulo autor="Keanu Reeves">
+              <contenido enlace="https://enlace-nacional-1-P0002.com"/>
+            </articulo>
+            <articulo autor="Scarlett Byrne">
+              <contenido enlace="https://enlace-nacional-2-P0002.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+        <seccion tipo="internacional" paginas="7">
+          <articulos>
+            <articulo autor="Charles Manson">
+              <contenido enlace="https://enlace-internacional-1-P0002.com"/>
+            </articulo>
+            <articulo autor="Crystal Hefner">
+              <contenido enlace="https://enlace-internacional-2-P0002.com"/>
+            </articulo>
+          </articulos>
+        </seccion>
+      </secciones>
+    </periodico>
+  </periodicos>
+</biblioteca>
